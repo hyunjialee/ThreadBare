@@ -60,3 +60,35 @@ public class ThreadTwoHashMapBroken extends Thread {
         System.out.println("Thread HashMap, all have been started");
     }
 }
+
+/**
+ Constructing HashMap of Size 8
+ Constructing HashMap of Size 6
+ Starting Threads in HashMap
+ Starting Threads in HashMap
+ ThreadTwoHashMapB - START T4
+ ThreadTwoHashMapB - START T5
+ ThreadTwoHashMapB - START T6
+ ThreadTwoHashMapB - START T7
+ ThreadTwoHashMapB - START T0
+ ThreadTwoHashMapB - START T1
+ ThreadTwoHashMapB - START T2
+ Thread HashMap, all have been started
+ ThreadTwoHashMapB - START T3
+ Exception in thread "Run of 6" java.lang.IllegalThreadStateException
+ at java.base/java.lang.Thread.start(Thread.java:1525)
+ at ThreadTwoHashMapBroken.runMapOfSize(ThreadTwoHashMapBroken.java:58)
+ at ThreadTwoHashMapBroken.access$000(ThreadTwoHashMapBroken.java:4)
+ at ThreadTwoHashMapBroken$1.run(ThreadTwoHashMapBroken.java:37)
+ ThreadTwoHashMapB - END T4
+ ThreadTwoHashMapB - END T5
+ ThreadTwoHashMapB - END T1
+ ThreadTwoHashMapB - END T2
+ ThreadTwoHashMapB - END T3
+ ThreadTwoHashMapB - END T7
+ ThreadTwoHashMapB - END T6
+ ThreadTwoHashMapB - END T0
+
+
+ - Two threads are trying to run the same thread
+ Process finished with exit code */
